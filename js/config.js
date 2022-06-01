@@ -90,9 +90,12 @@ d.addEventListener("click", e => {
     if (e.target.matches(".cover")) {
         d.querySelector(".ingresar").click()
     }
-    if (e.target.matches(".card")) {
+    if (e.target.matches(".icon-btn")) {
         let { index } = e.target.dataset;
         eliminarCard(index)
+    }
+    if (e.target.matches(".enviar")) {
+        
     }
 })
 d.addEventListener("DOMContentLoaded", () => {
@@ -188,9 +191,10 @@ let mostrarDatosEnElDOM = () => {
         let mostrar = "";
         birthday.forEach(({ nombre, mes, dia }, i) => {
             mostrar += `
-            <div class="card" data-index="${i}">
+            <div class="card">
                 <p class="card__item">${nombre}</p>
                 <p class="card__item">${dia}-${mes}</p>
+                <i class="fas fa-times icon-btn" data-index="${i}"></i>
             </div>`;
         })
         $lista.innerHTML = `${mostrar}`
@@ -205,11 +209,12 @@ let eliminarCard = (index) => {
 }
 
 let resaltarFestejadosEnElDOM = (i,link) => {
-    let a=`<a href="${link}" target="_blank" class="tooltip">Cumpleaño</a>`;
+     let a=`<a href="${link}" target="_blank" class="tooltip">Cumpleaño</a>`;
     d.querySelectorAll(".card")[i].insertAdjacentHTML("beforeend",a)
     d.querySelectorAll(".card")[i].style.border = "1px solid #2583c5";
    let tooltipLength= d.querySelectorAll(".tooltip").length;
    if(tooltipLength>1){
-    d.querySelectorAll(".tooltip")[1].remove();
+    d.querySelectorAll(".tooltip")[i].remove();
    }
+   
 }

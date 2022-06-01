@@ -158,7 +158,6 @@ body
 	justify-content:center;
 	align-items:center;
 	gap:0.5rem;
-	cursor:pointer;
 	transition:var(--transition);
 }
 .card:hover
@@ -170,6 +169,26 @@ box-shadow:2px 2px 5px var(--colorGrisClaro);
 	text-align: center;
 	color:var(--colorGrisOscuro);
 }
+
+.icon-btn
+{
+	position:absolute;
+	bottom:calc(100% - 1em);
+	left:calc(100% - 1em);
+	--wh:1rem;
+	width:var(--wh);
+	height:var(--wh);
+	background:var(--colorAzulOscuro);
+	border-radius:50%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:#fff;
+	font-size:0.5em;
+	cursor: pointer;
+	transition:var(--transition);
+}
+.icon-btn:hover{background:hsl(30,100%,45%);}
 .tooltip
 {
 	position:absolute;
@@ -180,6 +199,7 @@ box-shadow:2px 2px 5px var(--colorGrisClaro);
 	color:#fff;
 	padding:0.5em;
 	text-decoration:none;
+	text-align:center;
 }
 .tooltip::before
 {
