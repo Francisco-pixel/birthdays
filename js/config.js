@@ -124,6 +124,7 @@ $form.addEventListener("submit", e => {
         birthday.push(template);
         guardarBadeDeDatos()
         mostrarDatosEnElDOM()
+        $form.reset();
         setTimeout(() => {
             $mensajeDeError.remove();
         }, 1000)
