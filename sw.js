@@ -15,6 +15,7 @@ css=[
 ]
 link=[
     "francisco-pixel.github.io/modulos/css/style.css",
+    "https://francisco-pixel.github.io/modulos/css/style.css",
     "kit.fontawesome.com/925af5c22c.js"
 ];
 img.forEach(data=>cache_file.push(`./img/${data}.png`));
