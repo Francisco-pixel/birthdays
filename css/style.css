@@ -236,6 +236,7 @@ box-shadow:2px 2px 5px var(--colorGrisClaro);
 }
 @media screen and (max-width:800px){
 	.lista{	grid-template-columns:repeat(3,1fr);}
+	.contenedor{width:100%;}
 }
 @media screen and (max-width:500px){
 	.lista{	grid-template-columns:repeat(2,1fr);}
