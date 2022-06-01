@@ -170,7 +170,7 @@ box-shadow:2px 2px 5px var(--colorGrisClaro);
 	color:var(--colorGrisOscuro);
 }
 
-.icon-btn
+.contenedor-icon-btn
 {
 	position:absolute;
 	bottom:calc(100% - 1em);
@@ -188,7 +188,7 @@ box-shadow:2px 2px 5px var(--colorGrisClaro);
 	cursor: pointer;
 	transition:var(--transition);
 }
-.icon-btn:hover{background:hsl(30,100%,45%);}
+.contenedor-icon-btn:hover{background:hsl(30,100%,45%);}
 .tooltip
 {
 	position:absolute;

@@ -194,7 +194,9 @@ let mostrarDatosEnElDOM = () => {
             <div class="card">
                 <p class="card__item">${nombre}</p>
                 <p class="card__item">${dia}-${mes}</p>
-                <i class="fas fa-times icon-btn" data-index="${i}"></i>
+                <div class="contenedor-icon-btn">
+                    <i class="fas fa-times icon-btn" data-index="${i}"></i>               
+                </div>
             </div>`;
         })
         $lista.innerHTML = `${mostrar}`
