@@ -61,7 +61,7 @@ let timer = () => {
                     ingresarMensaje = `${ingresarTel}${mensaje}`;
                     resaltarFestejadosEnElDOM(i,ingresarMensaje)
                 }
-                if (diaActual == dia && mesActual == mes && hora==8 && min%30==0 && seg==0) {
+                if (diaActual == dia && mesActual == mes && hora==8 && min%30==0) {
                     let whatsAppApi = `https://api.whatsapp.com/send?phone=+1`,
                     ingresarTel = `${whatsAppApi}${tel}&text=`,
                     mensaje = `Muchas felicidades ${nombre}, que cumplas muchos años más, bendiciones`,
@@ -216,7 +216,7 @@ let resaltarFestejadosEnElDOM = (i,link) => {
     d.querySelectorAll(".card")[i].style.border = "1px solid #2583c5";
    let tooltipLength= d.querySelectorAll(".tooltip").length;
    if(tooltipLength>1){
-    d.querySelectorAll(".tooltip")[i].remove();
+    d.querySelectorAll(".tooltip")[1].remove();
    }
    
 }
