@@ -54,6 +54,7 @@ let timer = () => {
         min = date.getMinutes();
     if (baseDeDatos) {
         baseDeDatos.forEach(({ nombre, dia, mes, tel }, i) => {
+            c.log(seg)
                 if (diaActual == dia && mesActual == mes) {
                     let whatsAppApi = `https://api.whatsapp.com/send?phone=+1`,
                     ingresarTel = `${whatsAppApi}${tel}&text=`,
@@ -61,7 +62,7 @@ let timer = () => {
                     ingresarMensaje = `${ingresarTel}${mensaje}`;
                     resaltarFestejadosEnElDOM(i,ingresarMensaje)
                 }
-                if (diaActual == dia && mesActual == mes && hora==8 && min%30==0) {
+                if (diaActual == dia && mesActual == mes && hora==8 && min==0 && seg%30==0) {
                     let whatsAppApi = `https://api.whatsapp.com/send?phone=+1`,
                     ingresarTel = `${whatsAppApi}${tel}&text=`,
                     mensaje = `Muchas felicidades ${nombre}, que cumplas muchos años más, bendiciones`,
