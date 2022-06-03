@@ -54,7 +54,6 @@ let timer = () => {
         min = date.getMinutes();
     if (baseDeDatos) {
         baseDeDatos.forEach(({ nombre, dia, mes, tel }, i) => {
-            c.log(seg)
                 if (diaActual == dia && mesActual == mes) {
                     let whatsAppApi = `https://api.whatsapp.com/send?phone=+1`,
                     ingresarTel = `${whatsAppApi}${tel}&text=`,
