@@ -30,6 +30,8 @@ let intervalo = 1000,
     $enviar = d.querySelector(".enviar"),
     $mensajeDeError = d.createElement("p"),
     $lista = d.querySelector(".lista"),
+    meses="ene feb mar abr may jun jul ago sep oct nov dic".split(" "),
+    dias="Dom Lun Mar Mié Jue Vie Sáb".split(" "),
     baseDeDatos = JSON.parse(localStorage.getItem("birthday")),
     birthday = [],
     campos = {
@@ -190,10 +192,11 @@ let mostrarDatosEnElDOM = () => {
     if (baseDeDatos) {
         let mostrar = "";
         birthday.forEach(({ nombre, mes, dia }, i) => {
+            let fechaBirthday=new Date(new Date().getFullYear(),mes-1,dia);
             mostrar += `
             <div class="card">
                 <p class="card__item">${nombre}</p>
-                <p class="card__item">${dia}-${mes}</p>
+                <p class="card__item">${dias[fechaBirthday.getDay()]} ${dia} de ${meses[fechaBirthday.getMonth()]}</p>
                 <div class="contenedor-icon-btn">
                     <i class="fas fa-times icon-btn" data-index="${i}"></i>               
                 </div>
